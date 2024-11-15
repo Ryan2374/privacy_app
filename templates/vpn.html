@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VPN Module</title>
+</head>
+<body>
+    <h1>VPN Module</h1>
+    <form method="post">
+        <label for="provider">Select VPN Provider:</label>
+        <select id="provider" name="provider">
+            {% for provider in providers %}
+                <option value="{{ provider }}">{{ provider }}</option>
+            {% endfor %}
+        </select>
+        <button name="action" value="connect">Connect to VPN</button>
+        <button name="action" value="disconnect">Disconnect VPN</button>
+    </form>
+</body>
+</html>
